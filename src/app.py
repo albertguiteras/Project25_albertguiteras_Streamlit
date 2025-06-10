@@ -5,7 +5,10 @@ import numpy as np
 import joblib
 import os
 
-MODEL_PATH = "../models/knn_model_iris.pkl"
+BASE_DIR = os.path.dirname(__file__)
+MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "knn_model_iris.pkl")
+
+model = joblib.load(MODEL_PATH)
 
 model = joblib.load(MODEL_PATH)
 
